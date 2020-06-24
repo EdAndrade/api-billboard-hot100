@@ -8,3 +8,14 @@ Tecnologias usadas
 * [Express](https://expressjs.com/)
 
 * [cheerioJS](https://cheerio.js.org/)
+
+####Run:
+
+``` bash
+#instalar as dependênciias
+> npm install
+#run
+> node server.js
+#or
+> npm run dev
+```
