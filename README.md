@@ -15,7 +15,7 @@ Tecnologias usadas
 #instalar as dependênciias
 > npm install
 #run
-> node server.js
+> nodemon server.js
 #ou
 > npm run dev
 ```
