@@ -18,6 +18,7 @@ const getData = async () => {
             title,
             artist
         }
+        
     }).get()
     return Promise.all(hotData)
 
