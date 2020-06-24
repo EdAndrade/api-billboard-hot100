@@ -9,13 +9,13 @@ Tecnologias usadas
 
 * [cheerioJS](https://cheerio.js.org/)
 
-####Run:
+#### Run:
 
 ``` bash
 #instalar as dependênciias
 > npm install
 #run
 > node server.js
-#or
+#ou
 > npm run dev
 ```
