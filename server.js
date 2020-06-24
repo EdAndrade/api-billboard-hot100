@@ -1,5 +1,7 @@
 const request = require('request-promise')
 const cheerio = require('cheerio')
+const express = require('express')
+const app     = express()
 
 const baseURL = 'https://www.billboard.com'
 const hot100  = '/charts/hot-100'
@@ -18,14 +20,23 @@ const getData = async () => {
             title,
             artist
         }
-        
+
     }).get()
     return Promise.all(hotData)
 
 }
 
-getData().then(data => {
-    console.log(data)
-}).catch(error => {
-    console.log(error)
+const port = 3000
+
+app.get('/', (req, res) => {
+
+    getData().then(data => {
+        res.json(data)
+    }).catch(error => {
+        res.send("Ocorreu algum erro")
+    })
+})
+
+app.listen(port, () => {
+    console.log(`Running in localhost:${port}`)
 })
